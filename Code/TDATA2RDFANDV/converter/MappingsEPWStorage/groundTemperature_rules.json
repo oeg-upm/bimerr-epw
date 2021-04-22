@@ -1,0 +1,90 @@
+{
+
+    "resource_rules": [
+        {
+            "id" : "GroundTemperatureDepth",
+            "datasource_ids" : ["EPW Values groundTemperatures"],
+            "subject" : "https://bimerr.iot.linkeddata.es/def/weather#GroundTemperatureDepth/${adm03}_${city}_${wmo}_${groundTemperatureDepth}",
+            "properties"  : [
+                {
+                    "predicate" : "https://saref.etsi.org/core/isMeasuredIn", 
+                    "object" : "http://www.ontology-of-units-of-measure.org/resource/om-2/metre",
+                    "is_literal" : "False"
+                },
+                {
+                    "predicate" : "https://saref.etsi.org/core/hasValue", 
+                    "object" : "{$.groundTemperatureDepth}",
+                    "is_literal" : "True"
+                }
+            ]
+        },
+        {
+            "id" : "GroundConductivity",
+            "datasource_ids" : ["EPW Values groundTemperatures"],
+            "subject" : "https://bimerr.iot.linkeddata.es/def/weather#GroundConductivity/{$.groundTemperatureDepth}",
+            "properties"  : [
+                {
+                    "predicate" : "https://saref.etsi.org/core/isMeasuredIn", 
+                    "object" : "http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin",
+                    "is_literal" : "False"
+                },
+                {
+                    "predicate" : "https://saref.etsi.org/core/hasValue", 
+                    "object" : "{$.groundConductivity}",
+                    "is_literal" : "True"
+                }
+            ]
+        },
+        {
+            "id" : "GroundDensity",
+            "datasource_ids" : ["EPW Values groundTemperatures"],
+            "subject" : "https://bimerr.iot.linkeddata.es/def/weather#GroundDensity/{$.groundTemperatureDepth}",
+            "properties"  : [
+                {
+                    "predicate" : "https://saref.etsi.org/core/isMeasuredIn", 
+                    "object" : "http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre",
+                    "is_literal" : "False"
+                },
+                {
+                    "predicate" : "https://saref.etsi.org/core/hasValue", 
+                    "object" : "{$.groundDensity}",
+                    "is_literal" : "True"
+                }
+            ]
+        },
+        {
+            "id" : "GroundSpecificHeat",
+            "datasource_ids" : ["EPW Values groundTemperatures"],
+            "subject" : "https://bimerr.iot.linkeddata.es/def/weather#GroundSpecificHeat/{$.groundTemperatureDepth}",
+            "properties"  : [
+                {
+                    "predicate" : "https://saref.etsi.org/core/isMeasuredIn", 
+                    "object" : "http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKiligram",
+                    "is_literal" : "False"
+                },
+                {
+                    "predicate" : "https://saref.etsi.org/core/hasValue", 
+                    "object" : "{$.groundSpecificHeat}",
+                    "is_literal" : "True"
+                }
+            ]
+        },
+        {
+            "id" : "GroundTemperature",
+            "datasource_ids" : ["EPW Values groundTemperatures"],
+            "subject" : "https://bimerr.iot.linkeddata.es/def/weather#GroundTemperature/{$.groundTemperatureDepth}",
+            "properties"  : [
+                {
+                    "predicate" : "https://saref.etsi.org/core/isMeasuredIn", 
+                    "object" : "http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius",
+                    "is_literal" : "False"
+                },
+                {
+                    "predicate" : "https://saref.etsi.org/core/hasValue", 
+                    "object" : "January:{$.january} - February:{$.february} - March:{$.march} - April:{$.april} - May:{$.may} - June:{$.june} - July:{$.july} - August:{$.august} - September{$.september} - October:{$.october} - November:{$.november} - December:{$.december}",
+                    "is_literal" : "True"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "datasources": [
+        {
+            "id": "EPW Values groundTemperatures",
+            "type": "JsonDatasource",
+            "arguments": [
+                "$.groundTemperatures[*]"
+            ],
+            "connector": {
+                "arguments": [
+                    "../DataStorage/RUS_Chita-307580_IWEC.json"
+                ],
+                "type": "LocalFileConnector"
+            }
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "datasources": [
+        {
+            "id": "EPW Values periods",
+            "type": "JsonDatasource",
+            "arguments": [
+                "$.typical_extremePeriods[*]"
+            ],
+            "connector": {
+                "arguments": [
+                    "../DataStorage/RUS_Chita-307580_IWEC.json"
+                ],
+                "type": "LocalFileConnector"
+            }
+        }
+    ]
+}

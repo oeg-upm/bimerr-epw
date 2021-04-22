@@ -1,0 +1,50 @@
+{
+    "resource_rules": [
+        {
+            "id" : "Periods",
+            "datasource_ids" : ["EPW Values periods"],
+            "subject" : "https://bimerr.iot.linkeddata.es/def/weather#{$.typeOfPeriod}",
+            "properties"  : [
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#observedInSeason", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.wmo}/{$.typeOfPeriod}/{$.season}",
+                    "is_literal" : "False" 
+                }]
+        },
+        {
+            "id" : "PeriodsSeason",
+            "datasource_ids" : ["EPW Values periods"],
+            "subject" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.wmo}/{$.typeOfPeriod}/{$.season}",
+            "properties"  : [
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#firstDate", 
+                    "object" : "{$.firstDate}",
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "is_literal" : "True" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#lastDate", 
+                    "object" : "{$.lastDate}",
+                    "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "is_literal" : "True" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.epwName}",
+                    "is_literal" : "False" 
+                }
+            ]
+        },
+        {
+            "id" : "PeriodsEPWName",
+            "datasource_ids" : ["EPW Values periods"],
+            "subject" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.epwName}",
+            "properties"  : [
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.wmo}/{$.typeOfPeriod}/{$.season}",
+                    "is_literal" : "False" 
+                }]
+        }
+    ]
+}

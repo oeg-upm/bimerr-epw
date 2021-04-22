@@ -1,0 +1,17 @@
+{
+    "datasources": [
+        {
+            "id": "Json Values Location",
+            "type": "JsonDatasource",
+            "arguments": [
+                "$.location[*]"
+            ],
+            "connector": {
+                "arguments": [
+                    "../DSAPIDataStorage/Asia-Shanghai(39.9075_116.3972).json"
+                ],
+                "type": "LocalFileConnector"
+            }
+        }
+    ]
+}

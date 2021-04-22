@@ -1,0 +1,48 @@
+{
+    "resource_rules": [
+        {
+            "id" : "Location",
+            "datasource_ids" : ["EPW Values location"],
+            "subject" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.wmo}/Device",
+            "properties" : [
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#locatedIn", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/city/{$.city}",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#locatedIn", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/country/{$.country}",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#locatedIn", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.wmo}/spatialThing/Point",
+                    "is_literal" : "False" 
+                }
+            ]
+        },
+        {
+            "id" : "Point",
+            "datasource_ids" : ["EPW Values location"],
+            "subject" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.wmo}/spatialThing/Point",
+            "properties" : [
+                {
+                    "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat", 
+                    "object" : "{$.lat}",
+                    "is_literal" : "True" 
+                },
+                {
+                    "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#long", 
+                    "object" : "{$.long}",
+                    "is_literal" : "True" 
+                },
+                {
+                    "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt", 
+                    "object" : "{$.alt}",
+                    "is_literal" : "True" 
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "datasources": [
+        {
+            "id": "EPW Values datasource",
+            "type": "JsonDatasource",
+            "arguments": [
+                "$.epw[*]"
+            ],
+            "connector": {
+                "arguments": [
+                    "../DataStorage/RUS_Chita-307580_IWEC.json"
+                ],
+                "type": "LocalFileConnector"
+            }
+        }
+    ]
+}

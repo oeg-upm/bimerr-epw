@@ -1,0 +1,1550 @@
+prefixes:
+  saref: "https://saref.etsi.org/core/"
+  weat1: "https://bimerr.iot.linkeddata.es/resource/weather/"
+  weat2: "https://bimerr.iot.linkeddata.es/def/weather#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  om: "http://www.ontology-of-units-of-measure.org/resource/om-2/"
+  geo: "http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+mappings:
+  temp1:
+    sources:
+        - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+    s: weat2:temp
+    po:
+        - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement~iri]
+
+  tempMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:temp
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement~iri]
+
+  tempMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:temp
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement~iri]
+
+  tempMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:temp
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement~iri]
+
+  tempMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_day1:
+    sources:
+        - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+    s: weat2:temp_day
+    po:
+        - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement~iri]
+
+  temp_dayMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_day)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_day2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:temp_day
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement~iri]
+
+  temp_dayMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_day)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_day3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:temp_day
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement~iri]
+
+  temp_dayMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_day)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_day4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:temp_day
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement~iri]
+
+  temp_dayMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_day)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    temp_night1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:temp_night
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement~iri]
+
+  temp_nightMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_night)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_night2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:temp_night
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement~iri]
+
+  temp_nightMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_night)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_night3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:temp_night
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement~iri]
+
+  temp_nightMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_night)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_night4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:temp_night
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement~iri]
+
+  temp_nightMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_night)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    temp_max1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:temp_max
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement~iri]
+
+  temp_maxMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_max)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_max2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:temp_max
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement~iri]
+
+  temp_maxMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_max)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_max3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:temp_max
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement~iri]
+
+  temp_maxMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_max)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_max4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:temp_max
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement~iri]
+
+  temp_maxMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_max)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    temp_min1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:temp_min
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement~iri]
+
+  temp_minMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_min)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_min2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:temp_min
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement~iri]
+
+  temp_minMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_min)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_min3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:temp_min
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement~iri]
+
+  temp_minMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_min)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  temp_min4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:temp_min
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement~iri]
+
+  temp_minMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(temp_min)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    feels_like1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:feels_like
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement~iri]
+
+  feels_likeMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  feels_like2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:feels_like
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement~iri]
+
+  feels_likeMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  feels_like3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:feels_like
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement~iri]
+
+  feels_likeMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  feels_like4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:feels_like
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement~iri]
+
+  feels_likeMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    feels_like_day1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:feels_like_day
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement~iri]
+
+  feels_like_dayMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like_day)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  feels_like_day2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:feels_like_day
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement~iri]
+
+  feels_like_dayMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like_day)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  feels_like_day3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:feels_like_day
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement~iri]
+
+  feels_like_dayMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like_day)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  feels_like_day4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:feels_like_day
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement~iri]
+
+  feels_like_dayMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like_day)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    feels_like_night1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:feels_like_night
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement~iri]
+
+  feels_like_nightMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like_night)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  feels_like_night2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:feels_like_night
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement~iri]
+
+  feels_like_nightMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like_night)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  feels_like_night3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:feels_like_night
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement~iri]
+
+  feels_like_nightMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like_night)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  feels_like_night4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:feels_like_night
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement~iri]
+
+  feels_like_nightMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(feels_like_night)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    clouds1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:clouds
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement~iri]
+
+  cloudsMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(clouds)]
+          - [saref:isMeasuredIn, om:percent]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  clouds2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:clouds
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement~iri]
+
+  cloudsMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(clouds)]
+          - [saref:isMeasuredIn, om:percent]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  clouds3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:clouds
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement~iri]
+
+  cloudsMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(clouds)]
+          - [saref:isMeasuredIn, om:percent]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  clouds4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:clouds
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement~iri]
+
+  cloudsMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(clouds)]
+          - [saref:isMeasuredIn, om:percent]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    pressure1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:pressure
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement~iri]
+
+  pressureMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(pressure)]
+          - [saref:isMeasuredIn, om:hectopascal]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  pressure2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:pressure
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement~iri]
+
+  pressureMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(pressure)]
+          - [saref:isMeasuredIn, om:hectopascal]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  pressure3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:pressure
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement~iri]
+
+  pressureMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(pressure)]
+          - [saref:isMeasuredIn, om:hectopascal]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  pressure4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:pressure
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement~iri]
+
+  pressureMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(pressure)]
+          - [saref:isMeasuredIn, om:hectopascal]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    humidity1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:humidity
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement~iri]
+
+  humidityMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(humidity)]
+          - [saref:isMeasuredIn, om:percent]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  humidity2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:humidity
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement~iri]
+
+  humidityMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(humidity)]
+          - [saref:isMeasuredIn, om:percent]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  humidity3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:humidity
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement~iri]
+
+  humidityMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(humidity)]
+          - [saref:isMeasuredIn, om:percent]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  humidity4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:humidity
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement~iri]
+
+  humidityMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(humidity)]
+          - [saref:isMeasuredIn, om:percent]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    DewPointTemperature1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:DewPointTemperature
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement~iri]
+
+  DewPointTemperatureMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(DewPointTemperature)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  DewPointTemperature2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:DewPointTemperature
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement~iri]
+
+  DewPointTemperatureMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(DewPointTemperature)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  DewPointTemperature3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:DewPointTemperature
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement~iri]
+
+  DewPointTemperatureMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(DewPointTemperature)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  DewPointTemperature4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:DewPointTemperature
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement~iri]
+
+  DewPointTemperatureMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(DewPointTemperature)]
+          - [saref:isMeasuredIn, om:degreeFahrenheit]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    wind_speed1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:wind_speed
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement~iri]
+
+  wind_speedMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_speed)]
+          - [saref:isMeasuredIn, om:metrePerSecond-Time]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  wind_speed2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:wind_speed
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement~iri]
+
+  wind_speedMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_speed)]
+          - [saref:isMeasuredIn, om:metrePerSecond-Time]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  wind_speed3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:wind_speed
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement~iri]
+
+  wind_speedMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_speed)]
+          - [saref:isMeasuredIn, om:metrePerSecond-Time]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  wind_speed4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:wind_speed
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement~iri]
+
+  wind_speedMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_speed)]
+          - [saref:isMeasuredIn, om:metrePerSecond-Time]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    wind_gust1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:wind_gust
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement~iri]
+
+  wind_gustMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_gust)]
+          - [saref:isMeasuredIn, om:metrePerSecond-Time]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  wind_gust2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:wind_gust
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement~iri]
+
+  wind_gustMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_gust)]
+          - [saref:isMeasuredIn, om:metrePerSecond-Time]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  wind_gust3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:wind_gust
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement~iri]
+
+  wind_gustMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_gust)]
+          - [saref:isMeasuredIn, om:metrePerSecond-Time]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  wind_gust4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:wind_gust
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement~iri]
+
+  wind_gustMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_gust)]
+          - [saref:isMeasuredIn, om:metrePerSecond-Time]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    wind_deg1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:wind_deg
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement~iri]
+
+  wind_degMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_deg)]
+          - [saref:isMeasuredIn, om:degree]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  wind_deg2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:wind_deg
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement~iri]
+
+  wind_degMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_deg)]
+          - [saref:isMeasuredIn, om:degree]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  wind_deg3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:wind_deg
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement~iri]
+
+  wind_degMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_deg)]
+          - [saref:isMeasuredIn, om:degree]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  wind_deg4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:wind_deg
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement~iri]
+
+  wind_degMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(wind_deg)]
+          - [saref:isMeasuredIn, om:degree]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    visibility1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:visibility
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement~iri]
+
+  visibilityMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(visibility)]
+          - [saref:isMeasuredIn, om:metre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  visibility2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:visibility
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement~iri]
+
+  visibilityMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(visibility)]
+          - [saref:isMeasuredIn, om:metre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  visibility3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:visibility
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement~iri]
+
+  visibilityMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(visibility)]
+          - [saref:isMeasuredIn, om:metre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  visibility4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:visibility
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement~iri]
+
+  visibilityMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(visibility)]
+          - [saref:isMeasuredIn, om:metre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    precipitation1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:precipitation
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement~iri]
+
+  precipitationMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(precipitation)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  precipitation2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:precipitation
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement~iri]
+
+  precipitationMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(precipitation)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  precipitation3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:precipitation
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement~iri]
+
+  precipitationMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(precipitation)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  precipitation4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:precipitation
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement~iri]
+
+  precipitationMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(precipitation)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    snow1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:snow
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement~iri]
+
+  snowMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(snow)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  snow2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:snow
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement~iri]
+
+  snowMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(snow)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  snow3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:snow
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement~iri]
+
+  snowMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(snow)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  snow4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:snow
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement~iri]
+
+  snowMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(snow)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    rain1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:rain
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement~iri]
+
+  rainMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(rain)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  rain2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:rain
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement~iri]
+
+  rainMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(rain)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  rain3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:rain
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement~iri]
+
+  rainMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(rain)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  rain4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:rain
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement~iri]
+
+  rainMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(rain)]
+          - [saref:isMeasuredIn, om:millimetre]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+  
+    uvi1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat2:uvi
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement~iri]
+
+  uviMeasurement1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(uvi)]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  uvi2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat2:uvi
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement~iri]
+
+  uviMeasurement2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(uvi)]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  uvi3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat2:uvi
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement~iri]
+
+  uviMeasurement3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(uvi)]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+  uvi4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat2:uvi
+      po:
+          - [saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement~iri]
+
+  uviMeasurement4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: saref:relatesToMeasurement, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement
+      po:
+          - [saref:measurementMadeBy, weat1:$(city)/$(latitude)/$(longitude)/Device~iri]
+          - [saref:hasTimeStamp, $(dt), xsd:dateTime]
+          - [saref:hasValue, $(uvi)]
+          - [weat2:isDefinitionOf, weat1:$(timezone)($(latitude)_$(longitude))~iri]
+
+    jsonFile1:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.current[*]']
+      s: weat1:$(timezone)($(latitude)_$(longitude))
+      po:
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement~iri]
+          
+  jsonFile2:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.minutely[*]']
+      s: weat1:$(timezone)($(latitude)_$(longitude))
+      po:
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement~iri]
+
+  jsonFile3:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.hourly[*]']
+      s: weat1:$(timezone)($(latitude)_$(longitude))
+      po:
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement~iri]
+
+  jsonFile4:
+      sources:
+          - ['Australia-Darwin(-23.16_130.91).json~jsonpath','$.daily[*]']
+      s: weat1:$(timezone)($(latitude)_$(longitude))
+      po:
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/tempMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_dayMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_nightMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_maxMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/temp_minMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_likeMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_dayMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/feels_like_nightMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/cloudsMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/pressureMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/humidityMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/DewPointTemperatureMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_speedMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_gustMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/wind_degMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/visibilityMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/precipitationMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/snowMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/rainMeasurement~iri]
+          - [weat2:isDefinedBy, weat1:$(city)/$(latitude)/$(longitude)/$(dt)/uviMeasurement~iri]
+
+  

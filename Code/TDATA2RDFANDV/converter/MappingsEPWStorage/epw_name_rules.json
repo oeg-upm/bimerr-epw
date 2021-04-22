@@ -1,0 +1,146 @@
+{
+    "resource_rules": [
+        {
+            "id" : "EPWName",
+            "datasource_ids" : ["EPW Values datasource"],
+            "subject" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.epwName}",
+            "properties" : [
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/DryBulbTemperatureMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/DewPointTemperatureMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/RelativeHumidityMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/AtmosphericStationPressureMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/ExtraterrestrialHorizontalRadiationMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/ExtraterrestrialDirectNormalRadiationMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/HorizontalInfraredRadiationIntensityMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/GlobalHorizontalRadiationMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/DirectNormalRadiationMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/DiffuseHorizontalRadiationMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/GlobalHorizontalIlluminanceMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/DirectNormalIlluminanceMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/DiffuseHorizontalIlluminanceMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/ZenithLuminanceMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/WindDirectionMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/WindSpeedMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/TotalSkyCoverMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/OpaqueSkyCoverMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/VisibilityMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/CeilingHeightMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/PrecipitableWaterMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/AerosolOpticalDepthMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/SnowDepthMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/DaysSinceLastSnowfallMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/AlbedoMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/LiquidPrecipitationDepthMeasurement",
+                    "is_literal" : "False" 
+                },
+                {
+                    "predicate" : "https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy", 
+                    "object" : "https://bimerr.iot.linkeddata.es/resource/weather/{$.adm03}/{$.city}/{$.Year}-{$.Month}-{$.Day}-{$.Hour}/LiquidPrecipitationQuantityMeasurement",
+                    "is_literal" : "False" 
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "datasources": [
+        {
+            "id": "Json Values daily",
+            "type": "JsonDatasource",
+            "arguments": [
+                "$.daily[*]"
+            ],
+            "connector": {
+                "arguments": [
+                    "../DSAPIDataStorage/Europe-Madrid(40.4469_-3.6914).json"
+                ],
+                "type": "LocalFileConnector"
+            }
+        }
+    ]
+}
