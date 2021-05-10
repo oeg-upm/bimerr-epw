@@ -232,7 +232,7 @@ def extract_ConvertEnergyPlus(request):
         data = extractEPWData(link)
         removeFileJSON()  # Remove csvw.json
         # last replace is for a problem with Helio
-        epwName = link.split('/')[-1].replace('.epw', '').replace(".", "-").replace("%20","_").replace("%20","_")
+        epwName = link.split('/')[-1].replace('.epw', '').replace(".", "-").replace("%20","_")
         createFileJson(data, epwName)  # Create csvw.json
 
         headers, numberRowstoSkip = getJsonData(epwName)
