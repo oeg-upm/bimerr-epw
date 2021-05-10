@@ -44,7 +44,9 @@ def manageJsonData(json_data, city, new_latitude, new_longitude, timezone):
     data2 = {
             "latitude" : float(new_latitude),
             "longitude" : float(new_longitude),
-            "city" : city
+            "city" : city,
+            "lat2" : new_latitude.replace(".","*"),
+            "long2" : new_longitude.replace(".","*")
             }
 
     json_data.update({
@@ -58,7 +60,9 @@ def manageJsonData(json_data, city, new_latitude, new_longitude, timezone):
             "latitude" : float(new_latitude),
             "longitude" : float(new_longitude),
             "city" : city,
-            "timezone" : timezone
+            "timezone" : timezone,
+            "lat2" : new_latitude.replace(".","*"),
+            "long2" : new_longitude.replace(".","*")
         })
 
         if 'weather' in json_data['current']:
@@ -105,7 +109,9 @@ def manageJsonData(json_data, city, new_latitude, new_longitude, timezone):
             "latitude" : float(new_latitude),
             "longitude" : float(new_longitude),
             "city" : city,
-            "timezone" : timezone
+            "timezone" : timezone,
+            "lat2" : new_latitude.replace(".","*"),
+            "long2" : new_longitude.replace(".","*")
         })
         for elem in json_data['minutely']]
 
@@ -144,7 +150,9 @@ def manageJsonData(json_data, city, new_latitude, new_longitude, timezone):
             "latitude" : float(new_latitude),
             "longitude" : float(new_longitude),
             "city" : city,
-            "timezone" : timezone
+            "timezone" : timezone,
+            "lat2" : new_latitude.replace(".","*"),
+            "long2" : new_longitude.replace(".","*")
         })
         for elem in json_data['hourly']]
 
@@ -183,7 +191,9 @@ def manageJsonData(json_data, city, new_latitude, new_longitude, timezone):
             "latitude" : float(new_latitude),
             "longitude" : float(new_longitude),
             "city" : city,
-            "timezone" : timezone
+            "timezone" : timezone,
+            "lat2" : new_latitude.replace(".","*"),
+            "long2" : new_longitude.replace(".","*")
         })
         for elem in json_data['daily']]
 

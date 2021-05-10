@@ -8,7 +8,7 @@
             ],
             "connector": {
                 "arguments": [
-                    "../DSAPIDataStorage/Europe-Madrid(40.4469_-3.6914).json"
+                    "../DSAPIDataStorage/Europe-Madrid(40.4196_-3.692).json"
                 ],
                 "type": "LocalFileConnector"
             }
