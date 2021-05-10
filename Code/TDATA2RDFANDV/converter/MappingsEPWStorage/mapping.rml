@@ -347,7 +347,7 @@ map:map_ZenithLuminanceMeasurement_0 rml:logicalSource map:source_30;
     rr:subjectMap map:s_30;
     rr:predicateObjectMap map:pom_85, map:pom_86, map:pom_87, map:pom_88, map:pom_89.
 map:om_0 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{typeOfPeriod}/{season}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{typeOfPeriod}/{season}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_1 a rr:ObjectMap;
     rml:reference "firstDate";
@@ -360,13 +360,13 @@ map:om_100 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerSecond-Time";
     rr:termType rr:IRI.
 map:om_101 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_102 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#TotalSkyCover";
     rr:termType rr:IRI.
 map:om_103 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_104 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -380,16 +380,16 @@ map:om_106 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#TenthsOfCoverage";
     rr:termType rr:Literal.
 map:om_107 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_108 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#OpaqueSkyCover";
     rr:termType rr:IRI.
 map:om_109 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_11 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_110 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -403,13 +403,13 @@ map:om_112 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#TenthsOfCoverage";
     rr:termType rr:IRI.
 map:om_113 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_114 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#Visibility";
     rr:termType rr:IRI.
 map:om_115 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_116 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -423,7 +423,7 @@ map:om_118 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/kilometre";
     rr:termType rr:Literal.
 map:om_119 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_12 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#DewPointTemperature";
@@ -432,7 +432,7 @@ map:om_120 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#CeilingHeight";
     rr:termType rr:IRI.
 map:om_121 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_122 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -446,13 +446,13 @@ map:om_124 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/metre";
     rr:termType rr:IRI.
 map:om_125 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_126 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#PrecipitableWater";
     rr:termType rr:IRI.
 map:om_127 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_128 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -463,19 +463,19 @@ map:om_129 a rr:ObjectMap;
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#decimal>.
 map:om_13 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_130 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre";
     rr:termType rr:IRI.
 map:om_131 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_132 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#AerosolOpticalDepth";
     rr:termType rr:IRI.
 map:om_133 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_134 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -489,13 +489,13 @@ map:om_136 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#Thousandths";
     rr:termType rr:IRI.
 map:om_137 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_138 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#SnowDepth";
     rr:termType rr:IRI.
 map:om_139 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_14 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -513,13 +513,13 @@ map:om_142 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/centimetre";
     rr:termType rr:IRI.
 map:om_143 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_144 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#DaysSinceLastSnowfall";
     rr:termType rr:IRI.
 map:om_145 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_146 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -533,7 +533,7 @@ map:om_148 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/day";
     rr:termType rr:IRI.
 map:om_149 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_15 a rr:ObjectMap;
     rml:reference "DewPointTemperature";
@@ -543,7 +543,7 @@ map:om_150 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#LiquidPrecipitationDepth";
     rr:termType rr:IRI.
 map:om_151 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_152 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -557,13 +557,13 @@ map:om_154 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre";
     rr:termType rr:IRI.
 map:om_155 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_156 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#LiquidPrecipitationQuantity";
     rr:termType rr:IRI.
 map:om_157 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_158 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -580,7 +580,7 @@ map:om_160 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/hour";
     rr:termType rr:IRI.
 map:om_161 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_162 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/metre";
@@ -590,10 +590,10 @@ map:om_163 a rr:ObjectMap;
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#decimal>.
 map:om_164 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_165 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_166 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin";
@@ -603,13 +603,13 @@ map:om_167 a rr:ObjectMap;
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#decimal>.
 map:om_168 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_169 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_17 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_170 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre";
@@ -619,10 +619,10 @@ map:om_171 a rr:ObjectMap;
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#decimal>.
 map:om_172 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_173 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_174 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKiligram";
@@ -632,10 +632,10 @@ map:om_175 a rr:ObjectMap;
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#decimal>.
 map:om_176 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_177 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_178 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius";
@@ -647,19 +647,19 @@ map:om_18 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#RelativeHumidity";
     rr:termType rr:IRI.
 map:om_180 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_181 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_182 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/city/{city}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/city/{city}";
     rr:termType rr:IRI.
 map:om_183 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/country/{country}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/country/{country}";
     rr:termType rr:IRI.
 map:om_184 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Point/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Point/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_185 a rr:ObjectMap;
     rml:reference "lat";
@@ -674,43 +674,43 @@ map:om_187 a rr:ObjectMap;
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#decimal>.
 map:om_188 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_189 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundConductivity/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundConductivity/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
     rr:termType rr:IRI.
 map:om_19 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_190 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundTemperatureDepth/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundTemperatureDepth/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
     rr:termType rr:IRI.
 map:om_191 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundDensity/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundDensity/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
     rr:termType rr:IRI.
 map:om_192 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundSpecificHeat/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundSpecificHeat/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
     rr:termType rr:IRI.
 map:om_193 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundTemperature/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundTemperature/{adm03}_{city}_{wmo}_{groundTemperatureDepth}";
     rr:termType rr:IRI.
 map:om_194 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DryBulbTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DryBulbTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_195 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DewPointTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DewPointTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_196 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/RelativeHumidityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/RelativeHumidityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_197 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/AtmosphericStationPressureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/AtmosphericStationPressureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_198 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/ExtraterrestrialHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/ExtraterrestrialHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_199 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/ExtraterrestrialDirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/ExtraterrestrialDirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_2 a rr:ObjectMap;
     rml:reference "lastDate";
@@ -721,83 +721,83 @@ map:om_20 a rr:ObjectMap;
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#dateTime>.
 map:om_200 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/HorizontalInfraredRadiationIntensityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/HorizontalInfraredRadiationIntensityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_201 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GlobalHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GlobalHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_202 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_203 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DiffuseHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DiffuseHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_204 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GlobalHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GlobalHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_205 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DirectNormalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DirectNormalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_206 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DiffuseHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DiffuseHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_207 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/ZenithLuminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/ZenithLuminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_208 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/WindDirectionMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/WindDirectionMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_209 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/WindSpeedMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/WindSpeedMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_21 a rr:ObjectMap;
     rml:reference "RelativeHumidity";
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#decimal>.
 map:om_210 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/TotalSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/TotalSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_211 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/OpaqueSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/OpaqueSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_212 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/VisibilityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/VisibilityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_213 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/CeilingHeightMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/CeilingHeightMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_214 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/PrecipitableWaterMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/PrecipitableWaterMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_215 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/AerosolOpticalDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/AerosolOpticalDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_216 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/SnowDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/SnowDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_217 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DaysSinceLastSnowfallMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DaysSinceLastSnowfallMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_218 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/AlbedoMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/AlbedoMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_219 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/LiquidPrecipitationDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/LiquidPrecipitationDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_22 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/percent";
     rr:termType rr:IRI.
 map:om_220 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/LiquidPrecipitationQuantityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/LiquidPrecipitationQuantityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:om_23 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_24 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#AtmosphericStationPressure";
     rr:termType rr:IRI.
 map:om_25 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_26 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -811,16 +811,16 @@ map:om_28 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/pascal";
     rr:termType rr:IRI.
 map:om_29 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_3 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_30 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#ExtraterrestrialHorizontalRadiation";
     rr:termType rr:IRI.
 map:om_31 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_32 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -834,13 +834,13 @@ map:om_34 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#WattHourPerSquareMetre";
     rr:termType rr:IRI.
 map:om_35 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_36 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#ExtraterrestrialDirectNormalRadiation";
     rr:termType rr:IRI.
 map:om_37 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_38 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -851,19 +851,19 @@ map:om_39 a rr:ObjectMap;
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#decimal>.
 map:om_4 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_40 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#WattHourPerSquareMetre";
     rr:termType rr:IRI.
 map:om_41 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_42 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#HorizontalInfraredRadiationIntensity";
     rr:termType rr:IRI.
 map:om_43 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_44 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -877,16 +877,16 @@ map:om_46 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#WattHourPerSquareMetre";
     rr:termType rr:IRI.
 map:om_47 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_48 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#GlobalHorizontalRadiation";
     rr:termType rr:IRI.
 map:om_49 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_5 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{typeOfPeriod}/{season}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{typeOfPeriod}/{season}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_50 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -900,13 +900,13 @@ map:om_52 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#WattHourPerSquareMetre";
     rr:termType rr:IRI.
 map:om_53 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_54 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#DirectNormalRadiation";
     rr:termType rr:IRI.
 map:om_55 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_56 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -920,7 +920,7 @@ map:om_58 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#WattHourPerSquareMetre";
     rr:termType rr:IRI.
 map:om_59 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_6 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#DryBulbTemperature";
@@ -929,7 +929,7 @@ map:om_60 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#DiffuseHorizontalRadiation";
     rr:termType rr:IRI.
 map:om_61 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_62 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -943,13 +943,13 @@ map:om_64 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#WattHourPerSquareMetre";
     rr:termType rr:IRI.
 map:om_65 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_66 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#GlobalHorizontalIlluminance";
     rr:termType rr:IRI.
 map:om_67 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_68 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -960,19 +960,19 @@ map:om_69 a rr:ObjectMap;
     rr:termType rr:Literal;
     rr:datatype <http://www.w3.org/2001/XMLSchema#decimal>.
 map:om_7 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_70 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/lux";
     rr:termType rr:IRI.
 map:om_71 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_72 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#DirectNormalIlluminance";
     rr:termType rr:IRI.
 map:om_73 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_74 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -986,13 +986,13 @@ map:om_76 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/lux";
     rr:termType rr:IRI.
 map:om_77 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_78 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#DiffuseHorizontalIlluminance";
     rr:termType rr:IRI.
 map:om_79 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_8 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -1010,13 +1010,13 @@ map:om_82 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/lux";
     rr:termType rr:IRI.
 map:om_83 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_84 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#ZenithLuminance";
     rr:termType rr:IRI.
 map:om_85 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_86 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -1030,7 +1030,7 @@ map:om_88 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/candelaPerSquareMetre";
     rr:termType rr:IRI.
 map:om_89 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_9 a rr:ObjectMap;
     rml:reference "DryBulbTemperature";
@@ -1040,7 +1040,7 @@ map:om_90 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#WindDirection";
     rr:termType rr:IRI.
 map:om_91 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_92 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -1054,13 +1054,13 @@ map:om_94 a rr:ObjectMap;
     rr:constant "http://www.ontology-of-units-of-measure.org/resource/om-2/degree";
     rr:termType rr:Literal.
 map:om_95 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_96 a rr:ObjectMap;
     rr:constant "https://bimerr.iot.linkeddata.es/def/weather#WindSpeed";
     rr:termType rr:IRI.
 map:om_97 a rr:ObjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}";
     rr:termType rr:IRI.
 map:om_98 a rr:ObjectMap;
     rr:template "{Year}-{Month}-{Day}-{Hour}";
@@ -2178,409 +2178,409 @@ map:pom_99 a rr:PredicateObjectMap;
 map:s_0 a rr:SubjectMap;
     rr:template "https://bimerr.iot.linkeddata.es/def/weather#{typeOfPeriod}".
 map:s_1 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{typeOfPeriod}/{season}/{adm03}_{city}_{wmo}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{typeOfPeriod}/{season}/{adm03}_{city}_{wmo}".
 map:s_10 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/AtmosphericStationPressureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/AtmosphericStationPressureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_11 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/ExtraterrestrialHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/ExtraterrestrialHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_12 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/ExtraterrestrialHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/ExtraterrestrialHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_13 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/ExtraterrestrialDirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/ExtraterrestrialDirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_14 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/ExtraterrestrialDirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/ExtraterrestrialDirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_15 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/HorizontalInfraredRadiationIntensityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/HorizontalInfraredRadiationIntensityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_16 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/HorizontalInfraredRadiationIntensityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/HorizontalInfraredRadiationIntensityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_17 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GlobalHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GlobalHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_18 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GlobalHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GlobalHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_19 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_2 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}/{adm03}_{city}_{wmo}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}/{adm03}_{city}_{wmo}".
 map:s_20 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DirectNormalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_21 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DiffuseHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DiffuseHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_22 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DiffuseHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DiffuseHorizontalRadiationMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_23 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GlobalHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GlobalHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_24 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GlobalHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GlobalHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_25 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DirectNormalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DirectNormalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_26 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DirectNormalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DirectNormalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_27 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DiffuseHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DiffuseHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_28 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DiffuseHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DiffuseHorizontalIlluminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_29 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/ZenithLuminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/ZenithLuminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_3 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DryBulbTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DryBulbTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_30 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/ZenithLuminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/ZenithLuminanceMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_31 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/WindDirectionMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/WindDirectionMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_32 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/WindDirectionMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/WindDirectionMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_33 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/WindSpeedMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/WindSpeedMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_34 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/WindSpeedMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/WindSpeedMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_35 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/TotalSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/TotalSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_36 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/TotalSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/TotalSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_37 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/OpaqueSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/OpaqueSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_38 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/OpaqueSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/OpaqueSkyCoverMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_39 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/VisibilityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/VisibilityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_4 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DryBulbTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DryBulbTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_40 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/VisibilityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/VisibilityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_41 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/CeilingHeightMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/CeilingHeightMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_42 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/CeilingHeightMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/CeilingHeightMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_43 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/PrecipitableWaterMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/PrecipitableWaterMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_44 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/PrecipitableWaterMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/PrecipitableWaterMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_45 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/AerosolOpticalDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/AerosolOpticalDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_46 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/AerosolOpticalDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/AerosolOpticalDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_47 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/SnowDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/SnowDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_48 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/SnowDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/SnowDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_49 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DaysSinceLastSnowfallMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DaysSinceLastSnowfallMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_5 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DewPointTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DewPointTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_50 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DaysSinceLastSnowfallMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DaysSinceLastSnowfallMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_51 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/LiquidPrecipitationDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/LiquidPrecipitationDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_52 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/LiquidPrecipitationDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/LiquidPrecipitationDepthMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_53 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/LiquidPrecipitationQuantityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/LiquidPrecipitationQuantityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_54 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/LiquidPrecipitationQuantityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/LiquidPrecipitationQuantityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_55 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundTemperatureDepth/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundTemperatureDepth/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
 map:s_56 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundConductivity/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundConductivity/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
 map:s_57 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundDensity/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundDensity/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
 map:s_58 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundSpecificHeat/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundSpecificHeat/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
 map:s_59 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/GroundTemperature/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/GroundTemperature/{adm03}_{city}_{wmo}_{groundTemperatureDepth}".
 map:s_6 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/DewPointTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/DewPointTemperatureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_60 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Device/{adm03}_{city}_{wmo}".
 map:s_61 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/Point/{adm03}_{city}_{wmo}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/Point/{adm03}_{city}_{wmo}".
 map:s_62 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
 map:s_63 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
 map:s_64 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
 map:s_65 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
 map:s_66 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}/{adm03}_{city}_{wmo}~iri".
 map:s_67 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/{epwName}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/{epwName}".
 map:s_7 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/RelativeHumidityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/RelativeHumidityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_8 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/RelativeHumidityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/RelativeHumidityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:s_9 a rr:SubjectMap;
-    rr:template "https://bimerr.linkeddata.es/resource/weather/AtmosphericStationPressureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
+    rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/AtmosphericStationPressureMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}".
 map:source_0 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.typical_extremePeriods[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_1 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.typical_extremePeriods[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_10 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_11 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_12 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_13 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_14 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_15 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_16 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_17 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_18 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_19 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_2 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.typical_extremePeriods[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_20 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_21 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_22 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_23 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_24 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_25 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_26 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_27 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_28 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_29 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_3 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_30 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_31 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_32 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_33 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_34 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_35 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_36 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_37 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_38 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_39 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_4 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_40 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_41 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_42 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_43 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_44 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_45 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_46 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_47 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_48 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_49 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_5 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_50 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_51 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_52 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_53 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_54 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_55 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_56 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_57 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_58 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_59 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_6 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_60 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.location[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_61 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.location[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_62 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_63 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_64 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_65 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_66 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.groundTemperatures[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_67 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_7 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_8 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 map:source_9 a rml:LogicalSource;
-    rml:source "../DataStorage/RUS_Chita-307580_IWEC.json";
+    rml:source "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json";
     rml:iterator "$.epw[*]";
     rml:referenceFormulation ql:JSONPath.
 

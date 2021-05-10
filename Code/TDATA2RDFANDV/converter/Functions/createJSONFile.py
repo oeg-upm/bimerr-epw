@@ -24,7 +24,7 @@ def create8LinesJson(data,numberRowstoSkip,epwName):
 
     json_file['location'] = []
     json_file['location'].append({
-            "city":json_location[0],
+            "city":json_location[0].replace(" ","-"),
             "country":json_location[1],
             "adm03":json_location[2],
             "wmo":int(json_location[3]),
@@ -42,7 +42,7 @@ def create8LinesJson(data,numberRowstoSkip,epwName):
             "firstDate":period[1].replace("\n","").replace("\r","").replace(" ",""),
             "lastDate":period[2].replace("\n","").replace("\r","").replace(" ",""),
             "season":period[3],
-            "city":json_location[0],
+            "city":json_location[0].replace(" ","-"),
             "adm03":json_location[2],
             "wmo":int(json_location[3]),
             "epwName":json_location[7]
@@ -68,7 +68,7 @@ def create8LinesJson(data,numberRowstoSkip,epwName):
             "october":elem[13],
             "november":elem[14],
             "december":elem[15],
-            "city":json_location[0],
+            "city":json_location[0].replace(" ","-"),
             "adm03":json_location[2],
             "wmo":int(json_location[3]),
             "epwName":json_location[7]
@@ -139,7 +139,7 @@ def create8LinesJson(data,numberRowstoSkip,epwName):
           "Albedo": newList[28],
           "LiquidPrecipitationDepth": newList[29],
           "LiquidPrecipitationQuantity": newList[30],
-          "city" : newList[31],
+          "city" : newList[31].replace(" ","-"),
           "adm03" : newList[32],
           "wmo" : newList[33],
           "epwName" : newList[34]

@@ -8,7 +8,7 @@
             ],
             "connector": {
                 "arguments": [
-                    "../DataStorage/RUS_Chita-307580_IWEC.json"
+                    "../DataStorage/ESP_PV_Bilbao-AP-080250_TMYx-2004-2018.json"
                 ],
                 "type": "LocalFileConnector"
             }
