@@ -16,7 +16,7 @@ This files come from [OpenWeatherMap](https://openweathermap.org/) site.
 
 ## CODE IMPLEMENTATION
 
-The implementation of the code has been carried out using the [Python language](https://www.python.org/download/releases/3.0/) with the [Django library](https://www.djangoproject.com/), with which a rest service has been created with which all the tasks can be carried out in a simple way. Also, we have used [Helio](https://oeg-upm.github.io/helio/)) and [RMLMapper](https://github.com/RMLio/rmlmapper-java) to achieve the transformation of the data by means of mappings to RDF format.
+The implementation of the code has been carried out using the [Python language](https://www.python.org/download/releases/3.0/) with the [Django library](https://www.djangoproject.com/), with which a rest service has been created with which all the tasks can be carried out in a simple way. Also, we have used [Helio](https://oeg-upm.github.io/helio/) and [RMLMapper](https://github.com/RMLio/rmlmapper-java) to achieve the transformation of the data by means of mappings to RDF format.
 
 ## Authors
 
