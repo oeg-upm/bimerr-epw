@@ -1,10 +1,11 @@
 
 import csv
 import json
+from os import link
 import pycountry
 
 
-def create8LinesJson(data,numberRowstoSkip,epwName):
+def create8LinesJson(data,numberRowstoSkip,epwName, link):
 
     json_file = {}
 
@@ -31,7 +32,8 @@ def create8LinesJson(data,numberRowstoSkip,epwName):
             "lat":float(json_location[4]),
             "long":float(json_location[5]),
             "alt":float(json_location[6]),
-            "epwName":json_location[7]
+            "epwName":json_location[7],
+            "link" : link
         })
         
     json_file['typical_extremePeriods'] = []
@@ -45,7 +47,9 @@ def create8LinesJson(data,numberRowstoSkip,epwName):
             "city":json_location[0].replace(" ","-"),
             "adm03":json_location[2],
             "wmo":int(json_location[3]),
-            "epwName":json_location[7]
+            "epwName":json_location[7],
+            "link" : link
+            
         })
   
     json_file['groundTemperatures'] = []
@@ -71,7 +75,8 @@ def create8LinesJson(data,numberRowstoSkip,epwName):
             "city":json_location[0].replace(" ","-"),
             "adm03":json_location[2],
             "wmo":int(json_location[3]),
-            "epwName":json_location[7]
+            "epwName":json_location[7],
+            "link" : link
         })
 
 
@@ -142,7 +147,8 @@ def create8LinesJson(data,numberRowstoSkip,epwName):
           "city" : newList[31].replace(" ","-"),
           "adm03" : newList[32],
           "wmo" : newList[33],
-          "epwName" : newList[34]
+          "epwName" : newList[34],
+          "link" : link
         })
 
     

@@ -1,21 +1,24 @@
 prefixes:
   saref: "https://saref.etsi.org/core/"
-  data: "https://bimerr.iot.linkeddata.es/resource/weather/"
+  data: "http://data.bimerr.iot.linkeddata.es/resource/weather/"
   onto: "https://bimerr.iot.linkeddata.es/def/weather#"
   xsd: "http://www.w3.org/2001/XMLSchema#"
   om: "http://www.ontology-of-units-of-measure.org/resource/om-2/"
   geo: "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  dc: "http://purl.org/dc/terms/"
+  rdfs: "https://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  s4city: "https://saref.etsi.org/saref4city/"
+  prov: "http://www.w3.org/ns/prov#"
 
 
 mappings:
-
-
 
   Periods:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.typical_extremePeriods[*]']
     s: onto:$(typeOfPeriod)
     po:
+      - [rdfs:type, onto:WeatherPeriodMeasurement~iri]
       - [onto:observedInSeason, data:$(typeOfPeriod)/$(season)/$(adm03)_$(city)_$(wmo)~iri]
 
   PeriodsSeason:
@@ -23,16 +26,18 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.typical_extremePeriods[*]']
     s: data:$(typeOfPeriod)/$(season)/$(adm03)_$(city)_$(wmo)
     po:
+      - [rdfs:type, onto:Season~iri]
       - [onto:firstDate, $(firstDate), xsd:dateTime]
       - [onto:lastDate, $(lastDate), xsd:dateTime]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
 
   PeriodsEPWName:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.typical_extremePeriods[*]']
-    s: data:$(epwName)/$(adm03)_$(city)_$(wmo)/$(adm03)_$(city)_$(wmo)
+    s: data:$(epwName)
     po:
+      - [rdfs:type, onto:EPWFile~iri]
       - [onto:isDefinedBy, data:$(typeOfPeriod)/$(season)/$(adm03)_$(city)_$(wmo)~iri]
       
   
@@ -43,6 +48,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DryBulbTemperatureMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:DryBulbTemperature~iri]
   
   DryBulbTemperatureMeasurement:
@@ -50,11 +56,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DryBulbTemperatureMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(DryBulbTemperature), xsd:decimal]
       - [saref:isMeasuredIn, om:degreeCelsius~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
   
 
 
@@ -66,6 +73,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DewPointTemperatureMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:DewPointTemperature~iri]
   
   DewPointTemperatureMeasurement:
@@ -73,17 +81,19 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DewPointTemperatureMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(DewPointTemperature), xsd:decimal]
       - [saref:isMeasuredIn, om:degreeCelsius~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
   RelativeHumidity:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:RelativeHumidityMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:RelativeHumidity~iri]
   
   RelativeHumidityMeasurement:
@@ -91,17 +101,19 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:RelativeHumidityMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(RelativeHumidity), xsd:decimal]
       - [saref:isMeasuredIn, om:percent~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
   AtmosphericStationPressure:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:AtmosphericStationPressureMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:AtmosphericStationPressure~iri]
   
   AtmosphericStationPressureMeasurement:
@@ -109,11 +121,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:AtmosphericStationPressureMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(AtmosphericStationPressure), xsd:decimal]
       - [saref:isMeasuredIn, om:pascal~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -124,6 +137,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:ExtraterrestrialHorizontalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:ExtraterrestrialHorizontalRadiation~iri]
   
   ExtraterrestrialHorizontalRadiationMeasurement:
@@ -131,17 +145,19 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:ExtraterrestrialHorizontalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(ExtraterrestrialHorizontalRadiation), xsd:decimal]
       - [saref:isMeasuredIn, onto:WattHourPerSquareMetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
   ExtraterrestrialDirectNormalRadiation:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:ExtraterrestrialDirectNormalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:ExtraterrestrialDirectNormalRadiation~iri]
   
   ExtraterrestrialDirectNormalRadiationMeasurement:
@@ -149,11 +165,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:ExtraterrestrialDirectNormalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(ExtraterrestrialDirectNormalRadiation), xsd:decimal]
       - [saref:isMeasuredIn, onto:WattHourPerSquareMetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -163,6 +180,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:HorizontalInfraredRadiationIntensityMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:HorizontalInfraredRadiationIntensity~iri]
   
   HorizontalInfraredRadiationIntensityMeasurement:
@@ -170,11 +188,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:HorizontalInfraredRadiationIntensityMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(HorizontalInfraredRadiationIntensity), xsd:decimal]
       - [saref:isMeasuredIn, onto:WattHourPerSquareMetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -184,6 +203,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:GlobalHorizontalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:GlobalHorizontalRadiation~iri]
   
   GlobalHorizontalRadiationMeasurement:
@@ -191,11 +211,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:GlobalHorizontalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(GlobalHorizontalRadiation), xsd:decimal]
       - [saref:isMeasuredIn, onto:WattHourPerSquareMetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -206,6 +227,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DirectNormalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:DirectNormalRadiation~iri]
   
   DirectNormalRadiationMeasurement:
@@ -213,11 +235,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DirectNormalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(DirectNormalRadiation), xsd:decimal]
       - [saref:isMeasuredIn, onto:WattHourPerSquareMetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -227,6 +250,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DiffuseHorizontalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:DiffuseHorizontalRadiation~iri]
   
   DiffuseHorizontalRadiationMeasurement:
@@ -234,11 +258,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DiffuseHorizontalRadiationMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(DiffuseHorizontalRadiation), xsd:decimal]
       - [saref:isMeasuredIn, onto:WattHourPerSquareMetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -248,6 +273,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:GlobalHorizontalIlluminanceMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:GlobalHorizontalIlluminance~iri]
   
   GlobalHorizontalIlluminanceMeasurement:
@@ -255,11 +281,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:GlobalHorizontalIlluminanceMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(GlobalHorizontalIlluminance), xsd:decimal]
       - [saref:isMeasuredIn, om:lux~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -270,6 +297,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DirectNormalIlluminanceMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:DirectNormalIlluminance~iri]
   
   DirectNormalIlluminanceMeasurement:
@@ -277,11 +305,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DirectNormalIlluminanceMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(DirectNormalIlluminance), xsd:decimal]
       - [saref:isMeasuredIn, om:lux~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -291,6 +320,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DiffuseHorizontalIlluminanceMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:DiffuseHorizontalIlluminance~iri]
   
   DiffuseHorizontalIlluminanceMeasurement:
@@ -298,11 +328,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DiffuseHorizontalIlluminanceMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(DiffuseHorizontalIlluminance), xsd:decimal]
       - [saref:isMeasuredIn, om:lux~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -313,6 +344,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:ZenithLuminanceMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:ZenithLuminance~iri]
   
   ZenithLuminanceMeasurement:
@@ -320,11 +352,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:ZenithLuminanceMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(ZenithLuminance), xsd:decimal]
       - [saref:isMeasuredIn, om:candelaPerSquareMetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -335,6 +368,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:WindDirectionMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:WindDirection~iri]
   
   WindDirectionMeasurement:
@@ -342,11 +376,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:WindDirectionMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(WindDirection), xsd:decimal]
       - [saref:isMeasuredIn, om:degree]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -357,6 +392,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:WindSpeedMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:WindSpeed~iri]
   
   WindSpeedMeasurement:
@@ -364,11 +400,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:WindSpeedMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(WindSpeed), xsd:decimal]
       - [saref:isMeasuredIn, om:metrePerSecond-Time~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -378,6 +415,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:TotalSkyCoverMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:TotalSkyCover~iri]
   
   TotalSkyCoverMeasurement:
@@ -385,11 +423,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:TotalSkyCoverMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(TotalSkyCover), xsd:decimal]
       - [saref:isMeasuredIn, onto:TenthsOfCoverage]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -401,6 +440,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:OpaqueSkyCoverMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:OpaqueSkyCover~iri]
   
   OpaqueSkyCoverMeasurement:
@@ -408,11 +448,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:OpaqueSkyCoverMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(OpaqueSkyCover), xsd:decimal]
       - [saref:isMeasuredIn, onto:TenthsOfCoverage~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -423,6 +464,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:VisibilityMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:Visibility~iri]
   
   VisibilityMeasurement:
@@ -430,11 +472,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:VisibilityMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(Visibility), xsd:decimal]
       - [saref:isMeasuredIn, om:kilometre]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -445,6 +488,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:CeilingHeightMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:CeilingHeight~iri]
   
   CeilingHeightMeasurement:
@@ -452,11 +496,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:CeilingHeightMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(CeilingHeight), xsd:decimal]
       - [saref:isMeasuredIn, om:metre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -467,6 +512,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:PrecipitableWaterMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:PrecipitableWater~iri]
   
   PrecipitableWaterMeasurement:
@@ -474,11 +520,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:PrecipitableWaterMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(PrecipitableWater), xsd:decimal]
       - [saref:isMeasuredIn, om:millimetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -488,6 +535,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:AerosolOpticalDepthMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:AerosolOpticalDepth~iri]
   
   AerosolOpticalDepthMeasurement:
@@ -495,11 +543,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:AerosolOpticalDepthMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(AerosolOpticalDepth), xsd:decimal]
       - [saref:isMeasuredIn, onto:Thousandths~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -509,6 +558,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:SnowDepthMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:SnowDepth~iri]
   
   SnowDepthMeasurement:
@@ -516,11 +566,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:SnowDepthMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(SnowDepth), xsd:decimal]
       - [saref:isMeasuredIn, om:centimetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -531,6 +582,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DaysSinceLastSnowfallMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:DaysSinceLastSnowfall~iri]
   
   DaysSinceLastSnowfallMeasurement:
@@ -538,11 +590,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:DaysSinceLastSnowfallMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(DaysSinceLastSnowfall), xsd:decimal]
       - [saref:isMeasuredIn, om:day~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -553,6 +606,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:LiquidPrecipitationDepthMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:LiquidPrecipitationDepth~iri]
   
   LiquidPrecipitationDepthMeasurement:
@@ -560,11 +614,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:LiquidPrecipitationDepthMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(LiquidPrecipitationDepth), xsd:decimal]
       - [saref:isMeasuredIn, om:millimetre~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
 
@@ -574,6 +629,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:LiquidPrecipitationQuantityMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:relatesToProperty, onto:LiquidPrecipitationQuantity~iri]
   
   LiquidPrecipitationQuantityMeasurement:
@@ -581,14 +637,12 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:LiquidPrecipitationQuantityMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)
     po:
+      - [rdfs:type, saref:Measurement~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
       - [saref:hasTimeStamp, $(Year)-$(Month)-$(Day)-$(Hour), xsd:dateTime]
       - [saref:hasValue, $(LiquidPrecipitationQuantity), xsd:decimal]
       - [saref:isMeasuredIn, om:hour~iri]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
-
-
-
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
 
   GroundTemperatureDepth:
@@ -596,9 +650,11 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
     s: data:GroundTemperatureDepth/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)
     po:
+      - [rdfs:type, saref:Measurement~iri]
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:isMeasuredIn, om:metre~iri]
       - [saref:hasValue, $(groundTemperatureDepth), xsd:decimal]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
 
   GroundConductivity:
@@ -606,9 +662,11 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
     s: data:GroundConductivity/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)
     po:
+      - [rdfs:type, saref:Measurement~iri]
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:isMeasuredIn, om:wattPerMetreKelvin~iri]
       - [saref:hasValue, $(groundConductivity), xsd:decimal]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
 
   GroundDensity:
@@ -616,9 +674,11 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
     s: data:GroundDensity/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)
     po:
+      - [rdfs:type, saref:Measurement~iri]
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:isMeasuredIn, om:kilogramPerCubicmetre~iri]
       - [saref:hasValue, $(groundDensity), xsd:decimal]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
 
   GroundSpecificHeat:
@@ -626,9 +686,11 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
     s: data:GroundSpecificHeat/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)
     po:
+      - [rdfs:type, saref:Measurement~iri]
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:isMeasuredIn, om:joulePerKiligram~iri]
       - [saref:hasValue, $(groundSpecificHeat), xsd:decimal]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
 
   GroundTemperature:
@@ -636,9 +698,11 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
     s: data:GroundTemperature/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)
     po:
+      - [rdfs:type, saref:Measurement~iri]
+      - [rdfs:type, onto:WeatherProperty~iri]
       - [saref:isMeasuredIn, om:degreeCelsius~iri]
       - [saref:hasValue, January:$(january) - February:$(february) - March:$(march) - April:$(april) - May:$(may) - June:$(june) - July:$(july) - August:$(august) - September$(september) - October:$(october) - November:$(november) - December:$(december)]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
       - [saref:measurementMadeBy, data:Device/$(adm03)_$(city)_$(wmo)~iri]
 
   Location:
@@ -646,8 +710,11 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.location[*]']
     s: data:Device/$(adm03)_$(city)_$(wmo)
     po:
+      - [rdfs:type, s4city:AdministrativeArea~iri]
+      - [rdfs:type, geo:SpatialThing~iri]
       - [onto:locatedIn, data:city/$(city)~iri]
       - [onto:locatedIn, data:country/$(country)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
       - [geo:location, data:Point/$(adm03)_$(city)_$(wmo)~iri]
 
   Point:
@@ -655,44 +722,50 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.location[*]']
     s: data:Point/$(adm03)_$(city)_$(wmo)
     po:
+      - [rdfs:type, geo:Point~iri]
       - [geo:lat, $(lat), xsd:decimal]
       - [geo:long, $(long), xsd:decimal]
       - [geo:alt, $(alt), xsd:decimal]
-      - [onto:isDefinitionOf, data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri]
+      - [onto:isDefinitionOf, data:$(epwName)~iri]
 
   GroundConductivityEPWName:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
-    s: data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri
+    s: data:$(epwName)
     po:
+      - [rdfs:type, onto:EPWFile~iri]
       - [onto:isDefinedBy, data:GroundConductivity/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)~iri]
   
   GroundTemperatureDepthEPWName:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
-    s: data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri
+    s: data:$(epwName)
     po:
+      - [rdfs:type, onto:EPWFile~iri]
       - [onto:isDefinedBy, data:GroundTemperatureDepth/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)~iri]
   
   GroundDensityEPWName:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
-    s: data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri
+    s: data:$(epwName)
     po:
+      - [rdfs:type, onto:EPWFile~iri]
       - [onto:isDefinedBy, data:GroundDensity/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)~iri]
 
   GroundSpecificHeatEPWName:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
-    s: data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri
+    s: data:$(epwName)
     po:
+      - [rdfs:type, onto:EPWFile~iri]
       - [onto:isDefinedBy, data:GroundSpecificHeat/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)~iri]
 
   GroundTemperatureEPWName:
     sources:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.groundTemperatures[*]']
-    s: data:$(epwName)/$(adm03)_$(city)_$(wmo)~iri
+    s: data:$(epwName)
     po:
+      - [rdfs:type, onto:EPWFile~iri]
       - [onto:isDefinedBy, data:GroundTemperature/$(adm03)_$(city)_$(wmo)_$(groundTemperatureDepth)~iri]
 
 
@@ -701,6 +774,9 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:$(epwName)
     po:
+      - [prov:Organization, https://oeg.fi.upm.es/~iri]
+      - [rdfs:type, onto:EPWFile~iri]
+      - [dc:provenance, $(link)~iri]
       - [onto:isDefinedBy, data:DryBulbTemperatureMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)~iri]
       - [onto:isDefinedBy, data:DewPointTemperatureMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)~iri]
       - [onto:isDefinedBy, data:RelativeHumidityMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)~iri]

@@ -166,7 +166,7 @@ def extract_Convert(request):
 
         # Create json with data
 
-        create8LinesJson(data, numberRowstoSkip, epwName)
+        create8LinesJson(data, numberRowstoSkip, epwName, link)
 
         createMappings(epwName)
 
@@ -254,7 +254,7 @@ def extract_ConvertEnergyPlus(request):
 
         # Create json with data
 
-        create8LinesJson(data, numberRowstoSkip, epwName)
+        create8LinesJson(data, numberRowstoSkip, epwName, link)
 
         # Create mapping files with epwName
 
