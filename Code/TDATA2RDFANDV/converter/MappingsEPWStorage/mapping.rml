@@ -1302,11 +1302,11 @@ map:om_297 a rr:ObjectMap;
     rr:template "http://data.bimerr.iot.linkeddata.es/resource/weather/LiquidPrecipitationQuantityMeasurement/{adm03}_{city}_{Year}-{Month}-{Day}-{Hour}";
     rr:termType rr:IRI.
 map:pm_000 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_001 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#observedInSeason>.
 map:pm_002 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_003 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#firstDate>.
 map:pm_004 a rr:PredicateMap;
@@ -1316,15 +1316,15 @@ map:pm_005 a rr:PredicateMap;
 map:pm_006 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_007 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_008 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy>.
 map:pm_009 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_010 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_011 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_012 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_013 a rr:PredicateMap;
@@ -1336,11 +1336,11 @@ map:pm_015 a rr:PredicateMap;
 map:pm_016 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_017 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_018 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_019 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_020 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_021 a rr:PredicateMap;
@@ -1352,11 +1352,11 @@ map:pm_023 a rr:PredicateMap;
 map:pm_024 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_025 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_026 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_027 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_028 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_029 a rr:PredicateMap;
@@ -1368,11 +1368,11 @@ map:pm_031 a rr:PredicateMap;
 map:pm_032 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_033 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_034 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_035 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_036 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_037 a rr:PredicateMap;
@@ -1384,11 +1384,11 @@ map:pm_039 a rr:PredicateMap;
 map:pm_040 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_041 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_042 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_043 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_044 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_045 a rr:PredicateMap;
@@ -1400,11 +1400,11 @@ map:pm_047 a rr:PredicateMap;
 map:pm_048 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_049 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_050 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_051 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_052 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_053 a rr:PredicateMap;
@@ -1416,11 +1416,11 @@ map:pm_055 a rr:PredicateMap;
 map:pm_056 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_057 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_058 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_059 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_060 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_061 a rr:PredicateMap;
@@ -1432,11 +1432,11 @@ map:pm_063 a rr:PredicateMap;
 map:pm_064 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_065 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_066 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_067 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_068 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_069 a rr:PredicateMap;
@@ -1448,11 +1448,11 @@ map:pm_071 a rr:PredicateMap;
 map:pm_072 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_073 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_074 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_075 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_076 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_077 a rr:PredicateMap;
@@ -1464,11 +1464,11 @@ map:pm_079 a rr:PredicateMap;
 map:pm_080 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_081 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_082 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_083 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_084 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_085 a rr:PredicateMap;
@@ -1480,11 +1480,11 @@ map:pm_087 a rr:PredicateMap;
 map:pm_088 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_089 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_090 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_091 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_092 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_093 a rr:PredicateMap;
@@ -1496,11 +1496,11 @@ map:pm_095 a rr:PredicateMap;
 map:pm_096 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_097 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_098 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_099 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_100 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_101 a rr:PredicateMap;
@@ -1512,11 +1512,11 @@ map:pm_103 a rr:PredicateMap;
 map:pm_104 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_105 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_106 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_107 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_108 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_109 a rr:PredicateMap;
@@ -1528,11 +1528,11 @@ map:pm_111 a rr:PredicateMap;
 map:pm_112 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_113 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_114 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_115 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_116 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_117 a rr:PredicateMap;
@@ -1544,11 +1544,11 @@ map:pm_119 a rr:PredicateMap;
 map:pm_120 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_121 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_122 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_123 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_124 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_125 a rr:PredicateMap;
@@ -1560,11 +1560,11 @@ map:pm_127 a rr:PredicateMap;
 map:pm_128 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_129 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_130 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_131 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_132 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_133 a rr:PredicateMap;
@@ -1576,11 +1576,11 @@ map:pm_135 a rr:PredicateMap;
 map:pm_136 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_137 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_138 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_139 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_140 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_141 a rr:PredicateMap;
@@ -1592,11 +1592,11 @@ map:pm_143 a rr:PredicateMap;
 map:pm_144 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_145 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_146 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_147 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_148 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_149 a rr:PredicateMap;
@@ -1608,11 +1608,11 @@ map:pm_151 a rr:PredicateMap;
 map:pm_152 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_153 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_154 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_155 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_156 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_157 a rr:PredicateMap;
@@ -1624,11 +1624,11 @@ map:pm_159 a rr:PredicateMap;
 map:pm_160 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_161 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_162 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_163 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_164 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_165 a rr:PredicateMap;
@@ -1640,11 +1640,11 @@ map:pm_167 a rr:PredicateMap;
 map:pm_168 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_169 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_170 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_171 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_172 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_173 a rr:PredicateMap;
@@ -1656,11 +1656,11 @@ map:pm_175 a rr:PredicateMap;
 map:pm_176 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_177 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_178 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_179 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_180 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_181 a rr:PredicateMap;
@@ -1672,11 +1672,11 @@ map:pm_183 a rr:PredicateMap;
 map:pm_184 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_185 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_186 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_187 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_188 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_189 a rr:PredicateMap;
@@ -1688,11 +1688,11 @@ map:pm_191 a rr:PredicateMap;
 map:pm_192 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_193 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_194 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_195 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_196 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_197 a rr:PredicateMap;
@@ -1704,11 +1704,11 @@ map:pm_199 a rr:PredicateMap;
 map:pm_200 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_201 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_202 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_203 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_204 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_205 a rr:PredicateMap;
@@ -1720,11 +1720,11 @@ map:pm_207 a rr:PredicateMap;
 map:pm_208 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_209 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_210 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/relatesToProperty>.
 map:pm_211 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_212 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_213 a rr:PredicateMap;
@@ -1736,9 +1736,9 @@ map:pm_215 a rr:PredicateMap;
 map:pm_216 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_217 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_218 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_219 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/isMeasuredIn>.
 map:pm_220 a rr:PredicateMap;
@@ -1748,9 +1748,9 @@ map:pm_221 a rr:PredicateMap;
 map:pm_222 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_223 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_224 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_225 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/isMeasuredIn>.
 map:pm_226 a rr:PredicateMap;
@@ -1760,9 +1760,9 @@ map:pm_227 a rr:PredicateMap;
 map:pm_228 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_229 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_230 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_231 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/isMeasuredIn>.
 map:pm_232 a rr:PredicateMap;
@@ -1772,9 +1772,9 @@ map:pm_233 a rr:PredicateMap;
 map:pm_234 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_235 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_236 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_237 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/isMeasuredIn>.
 map:pm_238 a rr:PredicateMap;
@@ -1784,9 +1784,9 @@ map:pm_239 a rr:PredicateMap;
 map:pm_240 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_241 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_242 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_243 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/isMeasuredIn>.
 map:pm_244 a rr:PredicateMap;
@@ -1796,9 +1796,9 @@ map:pm_245 a rr:PredicateMap;
 map:pm_246 a rr:PredicateMap;
     rr:constant <https://saref.etsi.org/core/measurementMadeBy>.
 map:pm_247 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_248 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_249 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#locatedIn>.
 map:pm_250 a rr:PredicateMap;
@@ -1808,7 +1808,7 @@ map:pm_251 a rr:PredicateMap;
 map:pm_252 a rr:PredicateMap;
     rr:constant <http://www.w3.org/2003/01/geo/wgs84_pos#location>.
 map:pm_253 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_254 a rr:PredicateMap;
     rr:constant <http://www.w3.org/2003/01/geo/wgs84_pos#lat>.
 map:pm_255 a rr:PredicateMap;
@@ -1818,29 +1818,29 @@ map:pm_256 a rr:PredicateMap;
 map:pm_257 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinitionOf>.
 map:pm_258 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_259 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy>.
 map:pm_260 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_261 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy>.
 map:pm_262 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_263 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy>.
 map:pm_264 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_265 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy>.
 map:pm_266 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_267 a rr:PredicateMap;
     rr:constant <https://bimerr.iot.linkeddata.es/def/weather#isDefinedBy>.
 map:pm_268 a rr:PredicateMap;
-    rr:constant <http://www.w3.org/ns/prov#Organization>.
+    rr:constant <http://purl.org/dc/elements/1.1/creator>.
 map:pm_269 a rr:PredicateMap;
-    rr:constant <https://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+    rr:constant rdf:type.
 map:pm_270 a rr:PredicateMap;
     rr:constant <http://purl.org/dc/terms/provenance>.
 map:pm_271 a rr:PredicateMap;

@@ -6,9 +6,9 @@ prefixes:
   om: "http://www.ontology-of-units-of-measure.org/resource/om-2/"
   geo: "http://www.w3.org/2003/01/geo/wgs84_pos#"
   dc: "http://purl.org/dc/terms/"
-  rdfs: "https://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  rdfs: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   s4city: "https://saref.etsi.org/saref4city/"
-  prov: "http://www.w3.org/ns/prov#"
+  dc2: "http://purl.org/dc/elements/1.1/"
 
 
 mappings:
@@ -774,7 +774,7 @@ mappings:
       - ['ESP_Albacete-082800_SWEC.json~jsonpath', '$.epw[*]']
     s: data:$(epwName)
     po:
-      - [prov:Organization, https://oeg.fi.upm.es/~iri]
+      - [dc2:creator, https://oeg.fi.upm.es/~iri]
       - [rdfs:type, onto:EPWFile~iri]
       - [dc:provenance, $(link)~iri]
       - [onto:isDefinedBy, data:DryBulbTemperatureMeasurement/$(adm03)_$(city)_$(Year)-$(Month)-$(Day)-$(Hour)~iri]
